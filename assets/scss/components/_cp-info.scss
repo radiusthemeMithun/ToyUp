@@ -12,6 +12,8 @@
         background-color: $color-white;
         box-shadow: 8px 8px 24px rgba(0, 187, 174, 0.16);
         margin-bottom: 15px;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
         &.style-2 {
             box-shadow: 8px 8px 24px rgba(248, 142, 15, 0.16);
         }
@@ -22,6 +24,10 @@
         margin-bottom: 3px;
         a {
             color: $color-black;
+            transition: all .3s ease-in-out;
+            &:hover {
+                color: $color-primary;
+            }
         }
     }
 }

@@ -1,16 +1,83 @@
 .about-wrap {
     padding: 100px 0;
+    position: relative;
+    .about-inner-shape {
+        li {
+            position: absolute;
+            &:nth-child(1) {
+                bottom: 200px;
+                left: 200px;
+                animation: move1 3s linear infinite;
+            }
+            &:nth-child(2) {
+                top: 50px;
+                right: 100px;
+                animation: move1 3s linear infinite;
+            }
+            &:nth-child(3) {
+                top: 77px;
+                left: 77px;
+                animation: move1 3s linear infinite;
+            }
+            &:nth-child(4) {
+                bottom: 20%;
+                left: 100px;
+                animation: move1 3s linear infinite;
+            }
+            &:nth-child(5) {
+                top: 140px;
+                right: 40px;
+                animation: move1 3s linear infinite;
+            }
+        }
+    }
+    .info-box {
+        &:hover {
+            .shape-icon {
+                img {
+                    animation: toBottomFromTop .5s forwards;
+                }
+            }
+        }
+    }
 }
 
 .about-img-wrap {
     img {
-        display: block;
         border-radius: 642px;
+    }
+    .about-shape {
+        li {
+            position: absolute;
+            img {
+                border-radius: 0;
+            }
+            &:nth-child(1) {
+                top: 0;
+                right: 40px;
+                animation: rt-circle 25s linear infinite;
+            }
+            &:nth-child(2) {
+                bottom: 130px;
+                right: -35px;
+                animation: move1 3s linear infinite;
+            }
+            &:nth-child(3) {
+                bottom: 60px;
+                right: 70px;
+                animation: move2 3s linear infinite;
+            }
+            &:nth-child(4) {
+                bottom: 30px;
+                left: 80px;
+                animation: move2 3s linear infinite;
+            }
+        }
     }
 }
 
 .about-video-wrap {
-    background-image: url(../../media/other/about-1.jpg);
+    background-image: url(../../media/about/about-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 330px 0;
@@ -34,6 +101,13 @@
     gap: 130px;
 }
 .about-feature-box {
+    &:hover {
+        .item-shape-icon {
+            svg {
+                animation: toBottomFromTop .5s forwards;
+            }
+        }
+    }
     .item-shape-icon {
         height: 72px;
         width: 72px;
@@ -44,8 +118,10 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        overflow: hidden;
         svg {
             color: $color-white;
+            transition: all .3s ease-in-out;
         }
         &.style-2 {
             background-color: $color-secondary;
@@ -65,6 +141,10 @@
         margin-bottom: 10px;
         a {
             color: $color-black;
+            transition: all .3s ease-in-out;
+            &:hover {
+                color: $color-primary;
+            }
         }
     }
 }
