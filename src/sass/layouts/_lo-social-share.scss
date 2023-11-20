@@ -1,0 +1,26 @@
+/**
+ * Layout: Social Share.
+ */
+
+.rt-social-share {
+	.rt-share-btn {
+		border-radius: 4px;
+
+		@extend .rt-primary-color-bg;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		&:hover {
+			@extend .rt-secondary-color-bg;
+
+			.rt-share-icon-label {
+				.rt-share-icon {
+					background: rgba(255,255,255,0.1);
+				}
+			}
+		}
+	}
+}

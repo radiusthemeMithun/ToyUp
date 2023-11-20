@@ -1,0 +1,121 @@
+.deal-wrap {
+    background-color: $color-yellow-100;
+    .section-heading {
+        margin-bottom: 30px;
+        .toy-button {
+            .toy-btn {
+                color: $color-black;
+                padding: 8px 24px;
+                font-weight: $font-medium;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    color: $color-white;
+                    .shape {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    .rt-shape {
+        bottom: 90px;
+        left: 75px;
+        display: none;
+        @include media-only ("md", min) {
+            display: block;
+        }
+    }
+    &.style-2 {
+        background-color: $color-white;
+        .section-heading {
+            .toy-button {
+                .toy-btn {
+                    background-color: transparent;
+                    border: 1px solid $color-gray-line;
+                    &:hover {
+                        color: $color-white;
+                        background-color: $color-black;
+                        .shape {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+        .deal-box {
+            border: 1px solid #CFE3EA;
+        }
+        .deal-post-img {
+            background-color: #F6F6F6;
+        }
+    }
+}
+
+.deal-box {
+    border-radius: 16px;
+    border: 1px solid #FFE4C3;
+    background-color: $color-white;
+    padding: 20px;
+    gap: 30px;
+    &:hover {
+        .deal-post-img {
+            a {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    .rt-title {
+        font-weight: $font-medium;
+        margin-bottom: 10px;
+    }
+    &.style-2 {
+        .deal-post-img {
+            padding: 25px 26px 20px;
+        }
+    }
+}
+
+.deal-post-img {
+    background-color: $color-yellow-100;
+    text-align: center;
+    padding: 50px 26px 20px;
+    border-radius: 12px;
+    a {
+        img {
+            transition: all .4s ease;
+        }
+    }
+}
+.deal-post-content {
+    flex: 1;
+}
+
+.rt-rating {
+    ul {
+        gap: 1px;
+        li {
+            i {
+                color: $color-secondary;
+                font-size: 14px;
+            }
+            &.ratting-no {
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.rt-price {
+    color: $color-black;
+    font-family: $font-title;
+    font-size: 26px;
+    font-weight: $font-semibold;
+    line-height: 120%;
+    del {
+        color: rgba(105, 119, 138, .6);
+        font-size: 16px;
+    }
+}

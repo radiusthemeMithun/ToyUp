@@ -1,0 +1,175 @@
+
+
+.banner-wrap {
+    background-color: $color-black;
+    padding: 80px 0;
+    min-height: 307px;
+    .banner-img-wrap {
+        .banner-img {
+            bottom: -80px;
+            right: 30%;
+        }
+    }
+    .shape {
+        top: -80px;
+        right: 0;
+        display: none;
+        @include media-only ("lg", min) {
+            display: block;
+        }
+        svg {
+            color: rgba(255, 255, 255, .06);
+        }
+    }
+    .star-shape {
+        top: 25px;
+        left: 30px;
+        animation:  rt-scale 3s linear infinite;
+    }
+    .smile-shape {
+        top: 40px;
+        left: 48%;
+        animation:  rt-scale 3s linear infinite;
+        img {
+            filter: grayscale(100%);
+            opacity: 15%;
+        }
+    }
+    &.style-2 {
+        min-height: auto;
+        background-color: transparent; 
+        // padding: 0;
+        @include media-only ("lg", min) {
+            padding: 0;
+        }
+        .banner-layout {
+            background-color: $color-black;
+            padding: 30px;
+            border-radius: 24px;
+            @include media-only ("sm", min) {
+                padding: 45px 80px 40px;
+            }
+            @include media-only ("lg", min) {
+                transform: translateY(80px);
+                position: relative;
+                z-index: 1;
+            }
+            .banner-img-wrap {
+                .toy-img {
+                    bottom: -40px;
+                    right: -50px;
+                    @include media-only ("lg", min) {
+                        right: -10px;
+                    }
+                    .off-wrap {
+                        top: 50px;
+                        right: auto;
+                        left: -30%;
+                        .offer {
+                            background-image: url(../../media/banner/banner-border-2.svg);
+                        }
+                    }
+                }
+            }
+            &.style-2 {
+                transform: translateY(0);
+            }
+        }
+        .shape {
+            top: 0;
+            right: 35%;
+            img {
+                opacity: .1;
+            }
+        }
+    }
+    &.style-3 {
+        background-color: $color-gray-9;
+        padding-top: 100px;
+    }
+}
+
+.banner-box-1 {
+    .text-box {
+        .title {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .toy-button {
+            .toy-btn {
+                background-color: $color-secondary;
+                color: $color-white;
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    .shape {
+                        color: $color-white;
+                    }
+                }
+                .shape {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+
+.banner-img-wrap {
+    .banner-img {
+        bottom: -100px;
+        right: 240px;
+        z-index: 1;
+        display: none;
+        @include media-only ("md") {
+            display: block;
+        }
+    }
+    .round-shape {
+        width: 449px;
+        height: 449px;
+        border-radius: 449px;
+        background-color: #00ACA0;
+        bottom: -100px;
+        right: 140px;
+    }
+    .toy-img {
+        bottom: -80px;
+        right: -40px;
+        display: none;
+        @include media-only ("sm") {
+            display: block;
+        }
+        @include media-only ("lg") {
+            right: 50px;
+            display: block;
+        }
+    }
+}
+
+.off-wrap {
+    position: absolute;
+    top: -35%;
+    right: 17%;
+    .offer {
+        background-image: url(../../media/banner/banner-border.svg);
+        background-repeat: no-repeat;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+        padding: 30px;
+    }
+    .percent {
+        color: $color-white;
+        font-family: $font-title;
+        font-size: 33px;
+        font-weight: $font-bold;
+        line-height: 1;
+        display: block;
+        &.off {
+            font-size: 18px;
+            font-weight: $font-semibold;
+        }
+    }
+}

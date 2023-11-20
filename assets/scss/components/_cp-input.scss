@@ -1,0 +1,67 @@
+/**
+ * Components: Input.
+ */
+
+ .input-group {
+    width: 100%;
+    position: relative;
+    &::before {
+        content: url(../../media/shape/sms-2.svg);
+        position: absolute;
+        top: 16px;
+        left: 20px;
+        z-index: 4;
+    }
+    .form-control {
+        border-radius: 28px !important;
+        border: 1px solid $color-blue-100;
+        background-color: $color-white;
+        height: 56px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        color: $color-black;
+        padding: 0px 0px 0px 55px;
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+            border-color: $color-black;
+        }
+        &::placeholder {
+            color: $color-base;
+        }
+    }
+    .btn-outline-secondary {
+        border: 0;
+        color: $color-primary;
+        background-color: $color-secondary;
+        border-radius: 44px !important;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 6px;
+        transition: all .4s ease-in-out;
+        z-index: 4;
+        svg {
+            color: $color-white;
+            transition: all .4s ease-in-out;
+        }
+        &:hover {
+            background-color: $color-primary;
+            color: $color-black;
+            svg {
+                animation: headShake 1.5s;
+                color: $color-white;
+            }
+        }
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}

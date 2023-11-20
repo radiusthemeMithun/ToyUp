@@ -1,0 +1,41 @@
+
+.error-box {
+    .item-img {
+        margin-bottom: 35px;
+    }
+    .content {
+        @include media-only ("lg", min) {
+            width: 481px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .title {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+        .toy-button {
+            .toy-btn {
+                background-color: $color-secondary;
+                color: $color-white;
+                border-radius: 12px;
+                padding: 18px 30px;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    .shape-2 {
+                        transform: translateX(-5px);
+                    }
+                }
+                .shape-2 {
+                    color: $color-white;
+                    margin-right: 10px;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+    }
+}

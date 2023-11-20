@@ -1,0 +1,30 @@
+.breadcrumb-wrap {
+    padding: 255px 0 20px 0;
+    background-color: $color-gray-9;
+    border-bottom: 1px solid $color-gray-line;
+}
+
+.breadcrumb {
+    .breadcrumb-item {
+        font-weight: $font-medium;
+        a {
+            color: $color-body;
+            transition: all .3s ease-in-out;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+        &.active {
+            color: $color-black;
+        }
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 10px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: $color-body;
+    content: var(--bs-breadcrumb-divider, ">");
+}

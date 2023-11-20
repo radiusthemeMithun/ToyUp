@@ -1,0 +1,32 @@
+
+.play-btn {
+    height: 90px;
+    width: 90px;
+    background-color: $color-white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+    position: relative;
+    z-index: 1;
+    transition: all .4s ease-in-out;
+    svg {
+        color: $color-primary;
+        transition: all .4s ease-in-out;
+    }
+    &:hover {
+        background-color: $color-primary;
+        svg {
+            color: $color-white;
+        }
+    }
+}
+
+.border-shape-img {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    img {
+        animation-duration: 10s;
+    }
+}

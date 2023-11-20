@@ -1,0 +1,27 @@
+
+.rt-progress-bar {
+    .progress {
+        border-radius: 50px;
+        background-color: #DCF1D5;
+        height: 8px;
+        .progress-bar {
+            background-color: #3AAB13;
+            border-radius: 50px;
+        }
+    }
+}
+
+.rt-progress-bar-2 {
+    .progress {
+        border-radius: 50px;
+        background-color: #FAE7EA;
+        height: 8px;
+        .progress-bar {
+            border-radius: 50px;
+            &.bg-warning {
+                background-color: $color-red-500 !important;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,80 @@
+/**
+ * Components: Contact.
+ */
+
+ .contact-form-style-1 {
+    .form-group {
+        margin-bottom: 30px;
+        position: relative;
+        .rt-form-control {
+			background-color: transparent;
+            border: 1px solid $color-gray-line;
+            border-radius: $border-radius-sm;
+            height: 50px;
+            color: $color-black;
+            font-weight: $font-medium;
+            padding: 0;
+            padding-left: 50px;
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+                border-color: $color-black;
+            }
+        }
+        .icon-shape {
+            position: absolute;
+            top: 15px;
+            left: 32px;
+            z-index: 5;
+            i {
+                color: $color-primary;
+                font-size: 18px;
+            }
+        }
+        .rt-textarea {
+            min-height: 140px;
+            resize: none;
+            padding-top: 20px;
+        }
+        &.style-2 {
+            .icon-shape {
+                top: 25px;
+            }
+        }
+    }
+  
+    .submit-btn {
+        border-radius: $border-radius-sm;
+		color: $color-white;
+		background-color: $color-primary;
+		text-align: center;
+		display: inline-block;
+		padding: 10px 30px;
+		transition: all .3s ease-in-out;
+		font-weight: $font-semibold;
+        font-size: 18px;
+        border: 0;
+        &:hover {
+            color: $color-white;
+            background-color: #018f85;
+        }
+		&:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+  
+/*rt-contact-form*/
+  
+.rt-contact-form {
+    .form-response {
+        .alert {
+            margin-top: 1rem;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+
+.nav-tabs {
+    border-bottom: 0;
+    justify-content: center;
+    .nav-item {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .nav-link {
+            background-color: transparent;
+            border-radius: 6px;
+            border: 1px solid $color-gray-line;
+            height: 36px;
+            width: 36px;
+            display: inline-block;
+            text-align: center;
+            line-height: 18px;
+            padding: 0;
+            svg {
+                color: $color-body;
+            }
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+            }
+            &.active {
+                background-color: $color-primary;
+                border-color: $color-primary;
+                svg {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

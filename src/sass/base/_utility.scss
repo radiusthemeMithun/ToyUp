@@ -1,0 +1,74 @@
+/**
+ * Utility CSS.
+ */
+
+.rt-d-flex {
+	@extend %d-flex;
+}
+
+.rt-flex-wrap {
+	@extend %flex-wrap;
+}
+
+.rt-justify-content-center {
+	@extend %justify-content-center;
+}
+
+.rt-align-items-center {
+	@extend %align-items-center;
+}
+
+.rt-primary-color {
+	@extend %primary-color;
+}
+
+.rt-primary-color-bg {
+	@extend %primary-color-bg;
+}
+
+.rt-secondary-color {
+	@extend %secondary-color;
+}
+
+.rt-secondary-color-bg {
+	@extend %secondary-color-bg;
+}
+
+.rt-white-color {
+	@extend %white-color;
+}
+
+.rt-white-color-bg {
+	@extend %white-color-bg;
+}
+.rt-black-color {
+	@extend %black-color;
+}
+
+.rt-black-color-bg {
+	@extend %black-color-bg;
+}
+
+.rt-default-gutter {
+	@extend %default-gutter;
+}
+
+.rt-gutter-half {
+	@extend %gutter-half;
+}
+
+.rt-mb-0 {
+	@extend %mb-0;
+}
+
+.rt-static-content {
+	@extend %relative-content;
+}
+
+.rt-relative-content {
+	@extend %relative-content;
+}
+
+.rt-absolute-content {
+	@extend %relative-content;
+}

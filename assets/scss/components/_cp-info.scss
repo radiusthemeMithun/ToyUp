@@ -1,0 +1,27 @@
+.info-box {
+    border-radius: 12px;
+    background-color: $color-white;
+    padding: 30px;
+    .shape-icon {
+        height: 60px;
+        width: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 60px;
+        background-color: $color-white;
+        box-shadow: 8px 8px 24px rgba(0, 187, 174, 0.16);
+        margin-bottom: 15px;
+        &.style-2 {
+            box-shadow: 8px 8px 24px rgba(248, 142, 15, 0.16);
+        }
+    }
+    .title {
+        font-size: 18px;
+        font-weight: $font-bold;
+        margin-bottom: 3px;
+        a {
+            color: $color-black;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.brand-wrap {
+    padding-bottom: 100px;
+    &.style-2 {
+        background-color: #EDFBFA;
+        padding: 100px 0;
+    }
+    &.style-3 {
+        padding: 100px 0;
+    }
+    &.style-4 {
+        padding: 100px 0;
+        background-color: $color-gray-9;
+    }
+}
+
+.brand {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    @include media-only ("sm", min) {
+        gap: 40px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @include media-only ("md", min) {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 60px;
+    }
+    cursor: pointer;
+    li {
+        img {
+            filter: grayscale(100%);
+            opacity: 50%;
+            transition: all .4s ease-in-out;
+            &:hover {
+                filter: grayscale(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.rt-brand-wrap {
+    @include media-only ("lg", min) {
+        position: static;
+    }
+    &:hover {
+        .button-navigation {
+            .swiper-button-prev {
+                left: -10px;
+                opacity: 1;
+                visibility: visible;
+            }
+            .swiper-button-next {
+                right: -10px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .button-navigation {
+        .swiper-button-next, .swiper-button-prev {
+            height: 40px;
+            width: 40px;
+            border-radius: 40px;
+            border: 0;
+            background-color: $color-white;
+            &:hover {
+                background-color: $color-secondary;
+                svg {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    &.style-2 {
+        padding: 100px 0;
+    }
+}
+
+.rt-brand-box {
+    border-radius: $border-radius-xl;
+    background-color: $color-white;
+    padding: 30px 0;
+    &:hover {
+        .rt-brand-img {
+            img {
+                animation: toBottomFromTop .5s forwards;
+            }
+        }
+    }
+    .text {
+        font-size: 16px;
+        color: $color-black;
+        font-weight: $font-semibold;
+        @include media-only ("sm", min) {
+            font-size: 18px;
+        }
+        span {
+            font-weight: $font-normal;
+        }
+    }
+    &.style-2 {
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        background-color: #F6F6F6;
+        padding: 30px 0 23px;
+        .rt-brand-img {
+            background-color: $color-white;
+            border-color: $color-white;
+        }
+    }
+}
+
+.rt-brand-img {
+    height: 120px;
+    width: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 120px;
+    border: 1px solid $color-gray-line;
+    margin-bottom: 20px;
+    overflow: hidden;
+    img {
+        transition: all .4s ease-in-out;
+    }
+}

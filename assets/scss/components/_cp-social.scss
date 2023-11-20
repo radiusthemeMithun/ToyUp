@@ -1,0 +1,39 @@
+.item-social {
+    position: relative;
+    z-index: 1;
+    ul {
+        gap: 10px;
+        li {
+            a {
+                height: 36px;
+                width: 36px;
+                border: 1px solid $color-blue-100;
+                border-radius: 36px;
+                background-color: transparent;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .4s ease-in-out;
+                overflow: hidden;
+                svg {
+                    color: $color-body;
+                    transition: all .4s ease-in-out;
+                }
+                &:hover {
+                    background-color: $color-primary;
+                    border-color: $color-primary;
+                    svg {
+                        color: $color-white;
+                        animation: toBottomFromTop .5s forwards;
+                    }
+                }
+            }
+            &.text {
+                color: $color-black;
+                font-size: 18px;
+                font-weight: $font-semibold;
+                margin-right: 6px;
+            }
+        }
+    }
+}

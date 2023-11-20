@@ -1,0 +1,21 @@
+.testimonial-bottom-area-2 {
+  position: relative;
+  padding: 0px 0px 130px 0px;
+  z-index: 2;
+}
+.testimonial-bottom-area-2 .item-shape-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.testimonial-bottom-area-2 .item-shape-left img {
+  opacity: 10%;
+}
+.testimonial-bottom-area-2 .item-shape-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.testimonial-bottom-area-2 .item-shape-right img {
+  opacity: 10%;
+}
