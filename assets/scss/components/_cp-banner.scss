@@ -92,8 +92,13 @@
 .banner-box-1 {
     .text-box {
         .title {
-            font-size: 36px;
             margin-bottom: 30px;
+            font-size: 30px;
+            line-height: 1.2;
+            @include media-only ("xs", min) {
+                font-size: 36px;
+                line-height: 1.5;
+            }
         }
         .toy-button {
             .toy-btn {

@@ -1,0 +1,67 @@
+.faq-wrap {
+    .input-group {
+        margin-bottom: 25px;
+        &::before {
+            display: none;
+        }
+        .form-control {
+            border-radius: 16px !important;
+            background-color: $color-white;
+            box-shadow: 20px 20px 56px 0px rgba(0, 61, 56, 0.08);
+            height: 60px;
+            border: 0;
+            padding-left: 24px;
+            color: $color-black;
+        }
+        .btn-outline-secondary {
+            border-radius: 8px !important;
+            background-color: $color-primary;
+            box-shadow: 4px 4px 16px 0px rgba(0, 187, 174, 0.30);
+            display: inline-block;
+            padding: 10px 20px;
+            height: auto;
+            width: auto;
+            color: $color-white;
+            font-weight: $font-medium;
+            font-size: 16px;
+            svg {
+                position: relative;
+                top: -2px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+
+.faq-find-box {
+    @include media-only ("lg", min) {
+        width: 441px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .content {
+        .title {
+            font-weight: $font-bold;
+            margin-bottom: 5px;
+            font-size: 30px;
+            line-height: 1.2;
+            @include media-only ("xs", min) {
+                font-size: 36px;
+                line-height: 1.5;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .toy-button {
+            .toy-btn {
+                background-color: $color-primary;
+                color: $color-white;
+                .shape {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}

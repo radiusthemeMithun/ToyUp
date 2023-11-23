@@ -2,6 +2,7 @@
 .nav-tabs {
     border-bottom: 0;
     justify-content: center;
+    flex-wrap: nowrap;
     .nav-item {
         margin-right: 10px;
         &:last-child {

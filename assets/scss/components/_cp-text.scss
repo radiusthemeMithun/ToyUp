@@ -21,8 +21,13 @@
         margin-bottom: 30px;
         .title {
             color: $color-black;
-            font-size: 36px;
             margin-bottom: 20px;
+            font-size: 30px;
+            line-height: 1.2;
+            @include media-only ("xs", min) {
+                font-size: 36px;
+                line-height: 1.5;
+            }
         }
         p {
             color: $color-body;

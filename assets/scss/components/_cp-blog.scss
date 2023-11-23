@@ -31,10 +31,6 @@
                 border-radius: $border-radius-md;
                 transform-origin: left center;
                 width: 100%;
-                @include media-only ("lg", min) {
-                    width: 330px;
-                    height: 250px;
-                }
             }
         }
         .rt-tag {
@@ -66,24 +62,37 @@
                 }
             }
             .rt-tag {
-                left: 40px;
+                left: 35px;
+                top: 40px;
             }
         }
         .item-content {
-            padding: 15px 30px;
-            flex: 1;
+            padding-right: 0;
+            padding-left: 0;
+            @include media-only ("lg", min) {
+                flex: 1;
+                padding: 15px 30px;
+            }
             .post-area {
                 .text {
                     margin-left: 12px;
                     flex: 1;
+                    font-size: 14px;
                     .post {
                         line-height: 1.2;
                     }
                 }
                 .toy-button {
+                    @include media-only ("xs", max) {
+                        margin-top: 15px;
+                    }
                     .toy-btn {
                         background-color: $color-primary;
                         color: $color-white;
+                        padding: 8px 15px;
+                        @include media-only ("md", min) {
+                            padding: 13px 30px 12px;
+                        }
                         .shape {
                             color: $color-white;
                         }
@@ -101,6 +110,10 @@
     a {
         color: $color-black;
         transition: all .4s ease-in-out;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         &:hover {
             color: $color-primary;
         }
@@ -228,20 +241,40 @@
 }
 
 .rt-inner-filter {
-    padding: 0 10px 0 20px;
-    height: 56px;
+    padding: 20px;
+    height: auto;
     background-color: $color-white;
     border-radius: 6px;
+    @include media-only ("lg", min) {
+        padding: 0 10px 0 20px;
+        height: 56px;
+    }
 }
 
 .result-filter {
     font-size: 18px;
     font-weight: $font-medium;
     color: $color-black;
+
+}
+
+.result-dropdown-filter {
+    margin-left: 0;
+    @include media-only ("md", min) {
+        margin-left: 30px;
+    }
+    @include media-only ("lg", min) {
+        margin-left: 0;
+    }
 }
 
 .rt-dropdown {
-    margin-right: 24px;
+    @include media-only ("sm", min) {
+        margin-right: 5px;
+    }
+    @include media-only ("md", min) {
+        margin-right: 24px;
+    }
     .dropdown {
         .text {
             color: #69778A;
@@ -274,42 +307,15 @@
 
 
 
-
-// .single-blog-card {
-//     background-color: $color-primary;
-//     padding: 40px;
-//     @include media-only ("xs", min) {
-//         padding: 70px 40px 55px 60px;
-//     }
-//     .icon {
-//         margin-bottom: 20px;
-//         i {
-//             color: $color-black;
-//             font-size: 50px;
-//         }
-//     }
-//     .quote-area {
-//         .quote {
-//             font-size: 24px;
-//             font-style: italic;
-//             font-weight: $font-medium;
-//             line-height: 44px;
-//             color: $color-black;
-//             @include media-only ("xs", min) {
-//                 font-size: 36px;
-//                 line-height: 55px;
-//             } 
-//         }
-//     }
-// }
-
-
 .single-blog-top-wrap {
     border-radius: $border-radius-lg;
     border: 1px solid $color-gray-line;
     background-color: $color-white;
-    padding: 30px;
+    padding: 0 0 30px 0;
     margin-bottom: 30px;
+    @include media-only ("sm", min) {
+        padding: 30px;
+    }
     .item-img {
         margin-bottom: 30px;
         img {
@@ -374,11 +380,14 @@
 }
 
 .blog-quote-wrap {
-    padding: 35px 60px 30px 40px;
+    padding: 30px;
     border-radius: 12px;
     background-color: $color-blue-200;
     position: relative;
     margin-bottom: 40px;
+    @include media-only ("sm", min) {
+        padding: 35px 60px 30px 40px;
+    }
     &::before {
         content: "";
         height: 100%;
@@ -390,12 +399,15 @@
         border-radius: 12px;
     }
     .rt-quote {
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 600;
         line-height: 120%;
         color: $color-black;
         position: relative;
-        z-index: 1; 
+        z-index: 1;
+        @include media-only ("xs", min) {
+            font-size: 26px;
+        } 
         .quote-shape {
             position: absolute;
             top: 0;
@@ -423,6 +435,10 @@
     .tag-btn {
         ul {
             gap: 10px;
+            flex-wrap: wrap;
+            @include media-only ("xs", min) {
+                flex-wrap: nowrap;
+            } 
             li {
                 a {
                     color: $color-body;
@@ -448,8 +464,11 @@
     border-radius: 16px;
     border: 1px solid $color-gray-line;
     background-color: $color-white;
-    padding: 40px 50px 30px;
+    padding: 30px;
     margin-bottom: 30px;
+    @include media-only ("sm", min) {
+        padding: 40px 50px 30px;
+    }
     .item-img {
         img {
             border-radius: 150px;
@@ -457,7 +476,10 @@
     }
     .content {
         flex: 1;
-        margin-left: 30px;
+        margin-left: 0;
+        @include media-only ("sm", min) {
+            margin-left: 30px;
+        }
         .heading {
             .title-box {
                 .post {
@@ -489,7 +511,10 @@
     border-radius: $border-radius-lg;
     border: 1px solid $color-gray-line;
     background-color: $color-white;
-    padding: 50px;
+    padding: 30px;
+    @include media-only ("sm", min) {
+        padding: 50px;
+    }
     .title {
         font-size: 26px;
         font-weight: 700;

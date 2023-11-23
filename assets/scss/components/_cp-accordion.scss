@@ -1,0 +1,86 @@
+.accordion {
+    .accordion-item {
+        border: 0;
+        margin-bottom: 0px;
+        background-color: transparent;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .accordion-header {
+            .accordion-button {
+                display: block;
+                width: 100%;
+                text-align: left;
+                position: relative;
+                box-shadow: none;
+                transition: all .3s ease;
+                padding: 17px 0px;
+                background-color: transparent;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 30px;
+                border: 0;
+                border-radius: 0;
+                color: var(--color-secondary);
+                border-bottom: 1px solid $color-gray-line; 
+                .accr-plus, 
+                .accr-minus {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    color: var(--color-secondary);
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all 0.3s ease;
+                    font-size: 22px;
+                    border-radius: 0;
+                    &::before {
+                        width: auto;
+                        margin: 0;
+                    }
+                    @media only screen and (max-width: 479px) {
+                        right: 15px;
+                    }
+                }
+                .accr-plus {
+                    display: none;
+                }
+                &.collapsed {
+                    transition: all 0.3s ease;
+                    .accr-minus {
+                        display: none;
+                    }
+                
+                    .accr-plus {
+                        display: flex;
+                        color: #A6ADB7;
+                    }
+                }
+                &:focus {
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+            .accordion-button.collapsed {
+                color: var(--color-black);
+                background-color: transparent;
+                box-shadow: 0;
+            }
+        }
+        .accordion-body {
+           
+            padding: 20px 0;
+            border-top: 0;
+            background-color: transparent;
+            box-shadow: 0;
+            border-bottom: 1px solid $color-gray-line;
+            p {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

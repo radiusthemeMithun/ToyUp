@@ -2,6 +2,10 @@
     padding: 100px 0;
     position: relative;
     .about-inner-shape {
+        display: none;
+        @include media-only ("lg", min) {
+            display: block;
+        }
         li {
             position: absolute;
             &:nth-child(1) {
@@ -47,6 +51,10 @@
         border-radius: 642px;
     }
     .about-shape {
+        display: none;
+        @include media-only ("lg", min) {
+            display: block;
+        }
         li {
             position: absolute;
             img {
@@ -80,9 +88,12 @@
     background-image: url(../../media/about/about-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 330px 0;
+    padding: 130px 0;
     position: relative;
     z-index: 1;
+    @include media-only ("lg", min) {
+        padding: 330px 0;
+    }
     &::after {
         content: "";
         height: 100%;
@@ -98,7 +109,15 @@
 }
 
 .about-feature-layout {
-    gap: 130px;
+    flex-wrap: wrap;
+    @include media-only ("sm", min) {
+        gap: 30px;
+        flex-wrap: nowrap;
+    }
+    @include media-only ("lg", min) {
+        gap: 130px;
+        flex-wrap: nowrap;
+    }
 }
 .about-feature-box {
     &:hover {

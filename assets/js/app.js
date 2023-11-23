@@ -4,23 +4,23 @@
   /*===================================
   //Fixed Header
   =====================================*/
-  $(window).on("scroll", function () {
-    if ($("header").hasClass("sticky-on")) {
-      let stickyPlaceHolder = $("#sticky-placeholder"),
-        menu = $("#navbar-wrap"),
-        menuH = menu.outerHeight(),
-        topbarH = $("#topbar-wrap").outerHeight() || 0,
-        targrtScroll = topbarH,
-        header = $("header");
-      if ($(window).scrollTop() > targrtScroll) {
-        header.addClass("sticky");
-        stickyPlaceHolder.height(menuH);
-      } else {
-        header.removeClass("sticky");
-        stickyPlaceHolder.height(0);
-      }
-    }
-  });
+  // $(window).on("scroll", function () {
+  //   if ($("header").hasClass("sticky-on")) {
+  //     let stickyPlaceHolder = $("#sticky-placeholder"),
+  //       menu = $("#navbar-wrap"),
+  //       menuH = menu.outerHeight(),
+  //       topbarH = $("#topbar-wrap").outerHeight() || 0,
+  //       targrtScroll = topbarH,
+  //       header = $("header");
+  //     if ($(window).scrollTop() > targrtScroll) {
+  //       header.addClass("sticky");
+  //       stickyPlaceHolder.height(menuH);
+  //     } else {
+  //       header.removeClass("sticky");
+  //       stickyPlaceHolder.height(0);
+  //     }
+  //   }
+  // });
 
 
   /*-------------------------------------
@@ -56,6 +56,12 @@
       }
     }
   });
+
+  var myElement = document.querySelector("header");
+  var headroom  = new Headroom(myElement);
+  headroom.init();
+
+  
 
   /*=====================================
   //	Jquery Serch Box
@@ -350,11 +356,8 @@
         0: {
           slidesPerView: 1,
         },
-        374: {
-          slidesPerView: 2,
-        },
         576: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
         768: {
           slidesPerView: 2,
