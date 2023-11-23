@@ -5,6 +5,10 @@
  .input-group {
     width: 100%;
     position: relative;
+    display: block;
+    @include media-only (321px, min) {
+        display: flex;
+    }
     &::before {
         content: url(../../media/shape/sms-2.svg);
         position: absolute;
@@ -41,12 +45,16 @@
         align-items: center;
         height: 44px;
         width: 44px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 6px;
         transition: all .4s ease-in-out;
         z-index: 4;
+        margin-top: 10px;
+        @include media-only (321px, min) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+            margin-top: 0;
+        }
         svg {
             color: $color-white;
             transition: all .4s ease-in-out;

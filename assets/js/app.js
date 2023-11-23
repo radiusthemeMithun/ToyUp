@@ -1,27 +1,6 @@
 (function ($) {
   "use strict";
 
-  /*===================================
-  //Fixed Header
-  =====================================*/
-  // $(window).on("scroll", function () {
-  //   if ($("header").hasClass("sticky-on")) {
-  //     let stickyPlaceHolder = $("#sticky-placeholder"),
-  //       menu = $("#navbar-wrap"),
-  //       menuH = menu.outerHeight(),
-  //       topbarH = $("#topbar-wrap").outerHeight() || 0,
-  //       targrtScroll = topbarH,
-  //       header = $("header");
-  //     if ($(window).scrollTop() > targrtScroll) {
-  //       header.addClass("sticky");
-  //       stickyPlaceHolder.height(menuH);
-  //     } else {
-  //       header.removeClass("sticky");
-  //       stickyPlaceHolder.height(0);
-  //     }
-  //   }
-  // });
-
 
   /*-------------------------------------
     Countdown activation code
@@ -44,18 +23,6 @@
   //Fixed popup
   =====================================*/
 
-  $(window).on('scroll', function() {
-    var height = $(window).scrollTop();
-    var $fixedPopup = $('.fixed-popup-wrap');
-
-    if($fixedPopup.length > 0) {
-      if (height < 100) {
-        $fixedPopup.removeClass('scrolling');
-      } else {
-        $fixedPopup.addClass('scrolling');
-      }
-    }
-  });
 
   var myElement = document.querySelector("header");
   var headroom  = new Headroom(myElement);
@@ -103,23 +70,7 @@
       }
     });
   
-    /*-------------------------------------
-        Sidebar Menu Control
-      -------------------------------------*/
-    $(".sidebar-toggle").on("click", function() {
-        window.setTimeout(function() {
-            $("#wrapper").toggleClass("sidebar-collapsed");
-        }, 500);
-    });
-    /*-------------------------------------
-        Sidebar Menu Control Mobile
-      -------------------------------------*/
-    $(".sidebar-toggle-mobile").on("click", function() {
-        $("#wrapper").toggleClass("sidebar-collapsed-mobile");
-        if ($("#wrapper").hasClass("sidebar-collapsed")) {
-            $("#wrapper").removeClass("sidebar-collapsed");
-        }
-    });
+  
   
 
 
@@ -152,44 +103,7 @@
   }
 
 
-  /*------------------------------------
-   //  Offcanvas Menu activation code
-   -----------------------------------*/
-   $("#wrapper").on("click", ".offcanvas-menu-btn", function (e) {
-    e.preventDefault();
-    const $this = $(this),
-      wrapper = $(this).parents("body").find(">#wrapper"),
-      wrapMask = $("<div />").addClass("offcanvas-mask"),
-      offCancas = $("#offcanvas-wrap"),
-      position = offCancas.data("position") || "left";
-    if ($this.hasClass("menu-status-open")) {
-      wrapper.addClass("open").append(wrapMask);
-      $this.removeClass("menu-status-open").addClass("menu-status-close");
-      offCancas.css({
-        transform: "translateX(0)",
-      });
-    } else {
-      removeOffcanvas();
-    }
-    function removeOffcanvas() {
-      wrapper.removeClass("open").find("> .offcanvas-mask").remove();
-      $this.removeClass("menu-status-close").addClass("menu-status-open");
-      if (position === "left") {
-        offCancas.css({
-          transform: "translateX(-105%)",
-        });
-      } else {
-        offCancas.css({
-          transform: "translateX(105%)",
-        });
-      }
-    }
-    $(".offcanvas-mask, .offcanvas-close").on("click", function () {
-      removeOffcanvas();
-    });
-    return false;
-  });
-
+  
 
    /*------------------------------
    // Tooltip
@@ -276,7 +190,7 @@
     -------------------------------------*/
 
    var swiper1 = new Swiper(".hero-banner-slider-1", {
-    spaceBetween: 0,
+    spaceBetween: 10,
     slidesPerView: 1,
     speed: 1500,
     loop: true,
@@ -372,131 +286,11 @@
     });
 
 
-    /*-------------------------------------
-    Isotop
-    -------------------------------------*/
-    
-    $('.isotop-wrap').imagesLoaded(function() {
-      // filter items on button click
-      $('.isotope-classes-tab').on('click', 'button', function() {
-          var filterValue = $(this).attr('data-filter');
-          $grid.isotope({
-              filter: filterValue
-          });
-      });
-      // init Isotope
-      var $grid = $('.isotope-list').isotope({
-          itemSelector: '.project',
-          percentPosition: true,
-          transitionDuration: '0.7s',
-          layoutMode: 'fitRows',
-          masonry: {
-              // use outer width of grid-sizer for columnWidth
-              columnWidth: 1,
-          }
-      });
-  });
-  $('.isotope-button button').on('click', function(event) {
-      $(this).siblings('.is-checked').removeClass('is-checked');
-      $(this).addClass('is-checked');
-      event.preventDefault();
-  });
 
 
-    /*-------------------------------------
-  Intersection Observer
-  -------------------------------------*/
-if (!!window.IntersectionObserver) {
-  let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add("active-animation");
-              observer.unobserve(entry.target);
-          }
-      });
-  }, {
-      rootMargin: "0px 0px -100px 0px"
-  });
-  document.querySelectorAll('.has-animation').forEach(block => {
-      observer.observe(block)
-  });
-  } else {
-      document.querySelectorAll('.has-animation').forEach(block => {
-          block.classList.remove('has-animation')
-      });
-  }
 
 
-  /*=====================================
-  // Team Hover
-  ======================================*/
-  function mousemove_team_hover_effect() {
-    if (jQuery( window ).width() > 0 ) {
-        if ( jQuery('#wrapper').find(".rt-portfolio-default").length > 0 ) {
-            jQuery(".rt-portfolio-default .team-item,.kariez-project-box-2,.kariez-portfolio-box").each(function() {
-                let $Purpose = jQuery(this);
-                let $PurposeInner = $Purpose.find('.port-hover-effect');
-                $Purpose.mousemove(function(event){
-                    let y = event.pageY - $Purpose.offset().top + 10;
-                    let x = event.pageX - $Purpose.offset().left + 10;
-                    $PurposeInner.css({'top': y,'left': x,'bottom': "auto",'right': "auto",'opacity': 1});
-                })
-                .mouseleave(function() {
-                    $PurposeInner.css({'top': 'auto','left': 10,'bottom': 10,'right': "auto",'opacity': 0});
-                });
-            });
-        }
-    }
-  }
-  $(function() {
-    mousemove_team_hover_effect();
-  });
 
-
-    /*=====================================
-  // product
-  ======================================*/
-  let rtThumbnailTliderThumbStyle1 = new Swiper(
-    ".rt-thumbnail-slider-thumb-style-1", {
-        loop: true,
-        spaceBetween: 20,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-        speed: 700,
-        breakpoints: {
-          0: {
-            slidesPerView: 2,
-          },
-          480: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          992: {
-            slidesPerView: 3,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-        },
-    }
-);
-
-let rtThumbnailTliderStyle1 = new Swiper(".rt-thumbnail-slider-style-1", {
-    spaceBetween: 0,
-    loop: true,
-    speed: 1000,
-    slideToClickedSlide: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-        swiper: rtThumbnailTliderThumbStyle1,
-    },
-});
 
 
 
