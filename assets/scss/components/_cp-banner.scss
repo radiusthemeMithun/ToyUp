@@ -12,7 +12,7 @@
     }
     .shape {
         top: -80px;
-        right: 0;
+        right: -80px;
         display: none;
         @include media-only ("lg", min) {
             display: block;
@@ -102,10 +102,11 @@
         }
         .toy-button {
             .toy-btn {
-                background-color: $color-secondary;
                 color: $color-white;
+                &::before {
+                    background-color: $color-secondary;
+                }
                 &:hover {
-                    background-color: $color-primary;
                     color: $color-white;
                     .shape {
                         color: $color-white;

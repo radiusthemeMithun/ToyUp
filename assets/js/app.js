@@ -7,14 +7,15 @@
     -------------------------------------*/
     var eventCounter = $(".countdown");
     if (eventCounter.length) {
-        eventCounter.countdown("2024/02/21", function (e) {
+        eventCounter.countdown("2024/01/05", function (e) {
             $(this).html(
                 e.strftime(
-                    "<div class='countdown-section'><div><div class='countdown-number'>%D<span>:</span></div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H<span>:</span></div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M<span>:</span></div>  </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> </div></div>"
+                    "<div class='countdown-section'><div class='countdown-number'>%D<span>:</span></div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%H<span>:</span></div> </div></div><div class='countdown-section'><div><div class='countdown-number'>%M<span>:</span></div>  </div></div><div class='countdown-section'><div><div class='countdown-number'>%S</div> </div></div>"
                 )
             );
         });
     }
+
 
 
 
@@ -70,9 +71,6 @@
       }
     });
   
-  
-  
-
 
   /*-------------------------------------
       Mobile Menu Dropdown
@@ -101,9 +99,6 @@
         $("body").removeClass("slidemenuon");
       });
   }
-
-
-  
 
    /*------------------------------
    // Tooltip
@@ -253,11 +248,9 @@
       },
     });
 
-
      /*-------------------------------------
      Testimonial Slider
     -------------------------------------*/
-
     var swiper3 = new Swiper(".rt-testimonial-slider", {
       spaceBetween: 30,
       slidesPerView: 3,
@@ -287,7 +280,38 @@
 
 
 
+   /*-------------------------------------
+    Hero Slider
+    -------------------------------------*/
 
+    var swiper1 = new Swiper(".rt-categories-product-slider", {
+      spaceBetween: 30,
+      slidesPerView: 6,
+      speed: 1200,
+      loop: true,
+      // autoplay: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
 
 
@@ -334,23 +358,25 @@ if (yPopup.length) {
   /*==============================
    //  Back to Top
    ===============================*/
-   let $window = $(window);
-   let distance = 300;
-   $window.scroll(function () {
-     if ($window.scrollTop() >= distance) {
-       $("#back-to-top").fadeIn();
-     } else {
-       $("#back-to-top").fadeOut();
-     }
-   });
-   $("#back-to-top").click(function () {
-     $("html, body").animate(
-       {
-         scrollTop: 0,
-       },
-       800
-     );
-   });
+  // Back to top
+  var amountScrolled = 200;
+  var amountScrolledNav = 25;
+
+  $(window).scroll(function() {
+    if ( $(window).scrollTop() > amountScrolled ) {
+      $('button.scroll-to-top').addClass('show');
+    } else {
+      $('button.scroll-to-top').removeClass('show');
+    }
+  });
+
+  $('button.scroll-to-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
+    return false;
+});
+
       
       
 

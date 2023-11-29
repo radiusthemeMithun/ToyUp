@@ -23,11 +23,17 @@
         }
         .toy-button {
             .toy-btn {
-                background-color: $color-secondary;
                 color: $color-white;
-                border-radius: 12px;
                 padding: 18px 30px;
                 transition: all .3s ease-in-out;
+                border-radius: 12px;
+                &::before {
+                    background-color: $color-secondary;
+                    border-radius: 12px;
+                }
+                &::after {
+                    border-radius: 12px;
+                }
                 &:hover {
                     background-color: $color-primary;
                     color: $color-white;

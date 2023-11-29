@@ -27,9 +27,8 @@
         border-radius: $border-radius-md;
         a {
             img {
-                transition: all 500ms ease-in-out;
+                transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
                 border-radius: $border-radius-md;
-                transform-origin: left center;
                 width: 100%;
             }
         }

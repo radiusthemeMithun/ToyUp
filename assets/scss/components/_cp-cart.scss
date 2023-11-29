@@ -8,23 +8,22 @@
 }
 
 .select-option {
-    a {
-		background-color: $color-primary;
-		display: inline-flex;
-        align-items: center;
-        justify-content: center;
+    .toy-btn {
 		padding: 10px 20px;
-		transition: all .3s ease-in-out;
-		position: relative;
-		overflow: hidden;
 		font-weight: $font-medium;
 		border: 0;
         border-radius: 50px;
-        font-size: 16px;
         color: $color-white;
+        &::before {
+            background-color: $color-primary;
+        }
+        &::after {
+            background-color: $color-secondary;
+        }
         &:hover {
             .shape {
-                animation: toBottomFromTop 0.5s forwards;
+                animation: toBottomFromTop 0.7s forwards;
+                transform: translateX(0);
             }
         }
         .shape {
@@ -51,7 +50,7 @@
         overflow: hidden;
         &:hover {
             .shape {
-                animation: toBottomFromTop 0.5s forwards;
+                animation: toBottomFromTop 0.7s forwards;
                 color: $color-primary;
             }
         }

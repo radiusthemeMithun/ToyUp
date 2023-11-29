@@ -1,20 +1,77 @@
+// .toy-button {
+// 	.toy-btn {
+// 		background-color: $color-white;
+// 		text-align: center;
+// 		display: inline-flex;
+//         align-items: center;
+//         justify-content: center;
+// 		padding: 13px 30px 12px;
+// 		transition: all .3s ease-in-out;
+// 		font-weight: $font-semibold;
+// 		border: 0;
+//         border-radius: 100px;
+//         font-size: 16px;
+//         color: $color-black;
+// 		&:hover {
+// 			background-color: $color-black;
+// 			color: $color-white;
+// 			.shape {
+// 				transform: translateX(5px);
+// 				color: $color-white;
+// 			}
+// 		}
+//         .shape {
+//             color: $color-black;
+//             margin-left: 10px;
+// 			transition: all .3s ease-in-out;
+//         }
+// 	}
+// }
+
 .toy-button {
 	.toy-btn {
-		background-color: $color-white;
+		background-color: transparent;
 		text-align: center;
 		display: inline-flex;
         align-items: center;
         justify-content: center;
 		padding: 13px 30px 12px;
-		transition: all .3s ease-in-out;
 		font-weight: $font-semibold;
 		border: 0;
         border-radius: 100px;
         font-size: 16px;
         color: $color-black;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		transition: all .5s;
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			background-color: $color-white;
+			border-radius: 100px;
+			transition: all .5s;
+			z-index: -2;
+			transform: translate3D(0, 0, 0);
+		}
+		&::after {
+			background-color: $color-primary;
+			top: 0;
+			z-index: -1;
+			transform: translate3D(-101%,0,0);
+		}
 		&:hover {
-			background-color: $color-black;
-			color: $color-white;
+			&::before, &::after {
+				transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66) !important;
+			}
+			&::after {
+				transform: translate3D(0, 0, 0);
+			}
 			.shape {
 				transform: translateX(5px);
 				color: $color-white;
@@ -23,7 +80,7 @@
         .shape {
             color: $color-black;
             margin-left: 10px;
-			transition: all .3s ease-in-out;
+			transition: all .5s ease-in-out;
         }
 	}
 }

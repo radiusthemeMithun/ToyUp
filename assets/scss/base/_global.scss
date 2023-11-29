@@ -306,9 +306,9 @@ select {
 }
 
 .section-padding {
-    padding-block: 100px;
+    padding-block: 120px;
     @include breakpoint("lg") {
-        padding: 80px 0;
+        padding: 100px 0;
     }
     @include breakpoint("md") {
         padding: 80px 0;

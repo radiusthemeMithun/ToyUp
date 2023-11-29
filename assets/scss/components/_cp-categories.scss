@@ -1,0 +1,113 @@
+.rt-categories-wrap {
+    background-color: $color-primary;
+    .section-heading {
+        .heading-title {
+            color: $color-white;
+        }
+        p {
+            color: $color-white;
+        }
+    }
+    &:hover {
+        .button-navigation {
+            .swiper-button-prev {
+                left: -10px;
+                opacity: 1;
+                visibility: visible;
+            }
+            .swiper-button-next {
+                right: -10px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    .button-navigation {
+        .swiper-button-next, .swiper-button-prev {
+            height: 40px;
+            width: 40px;
+            border-radius: 40px;
+            border: 0;
+            background-color: $color-white;
+            transform: translateY(0);
+            svg {
+                color: $color-primary;
+            }
+            &:hover {
+                background-color: $color-secondary;
+                svg {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .rt-cat-shape {
+        li {
+            position: absolute;
+            width: 164px;
+            height: 100%;
+            opacity: 0.3;
+            background: linear-gradient(270deg, #00BBAE -1.09%, rgba(0, 187, 174, 0.00) 97.83%);
+            z-index: 1;
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+                background: linear-gradient(-270deg, #00BBAE -1.09%, rgba(0, 187, 174, 0.00) 97.83%);
+            }
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.rt-categories-product-slider {
+    position: static;
+}
+
+.rt-categories-product {
+    background-color: $color-white;
+    border-radius: 20px;
+    padding: 30px 0;
+    &:hover {
+        .item-img {
+            a {
+                img {
+                    animation: toBottomFromTop .7s forwards;
+                }
+            }
+        }
+    }
+    .item-img {
+        margin-bottom: 15px;
+        a {
+            height: 120px;
+            width: 120px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background-color: #EBFAF4;
+            overflow: hidden;
+            img {
+                transition: all .3s;
+            }
+        }
+    }
+    .product-text {
+        position: relative;
+        z-index: 2;
+        .text {
+            color: $color-body;
+            transition: all .3s ease-in-out;
+            font-size: 18px;
+            font-weight: $font-semibold;
+            &:hover {
+                color: $color-black;
+            }
+        }
+    }
+}
+
+

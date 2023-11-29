@@ -61,12 +61,12 @@
                 position: relative;
                 &::after {
                     content: "";
-                    height: 480px;
+                    height: 500px;
                     width: 100%;
                     position: absolute;
                     border-left: 1px solid #0E2748;
                     top: -120px;
-                    left: -60px;
+                    left: -40px;
                     display: none;
                     @include media-only ("lg", min) {
                         display: block;
@@ -406,6 +406,8 @@
                 color: $color-body;
                 transition: all .4s ease;
                 margin-bottom: 15px;
+                font-size: 18px;
+                font-weight: $font-medium;
                 &:hover {
                     &::after {
                         width: 100%;
@@ -436,6 +438,8 @@
     p {
         color: $color-base;
         margin-bottom: 25px;
+        font-weight: $font-medium;
+        font-size: 18px;
     }
 }
 
@@ -447,6 +451,8 @@
     }
     .text {
         color: $color-white;
+        font-size: 18px;
+        font-weight: $font-medium;
         a {
             color: $color-white;
             transition: all .3s ease-in-out;
@@ -507,6 +513,11 @@
     }
 }
 
+.footer-logo-desc {
+    font-size: 18px;
+    font-weight: $font-medium;
+}
+
 .rtf-contact {
     a {
         display: flex;
@@ -544,7 +555,7 @@
             color: $color-body;
             font-weight: $font-medium;
             transition: all .3s ease-in-out;
-            font-size: 15px;
+            font-size: 18px;
         }
     }
 }

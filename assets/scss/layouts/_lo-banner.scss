@@ -14,10 +14,12 @@
                 &:nth-child(1) {
                     top: 35%;
                     right: 90px;
+                    animation:  move1 3s linear infinite;
                 }
                 &:nth-child(2) {
                     bottom: 80px;
                     left: 80px;
+                    animation:  rt-circle 25s linear infinite;
                 }
             }
         }
@@ -235,8 +237,14 @@
                 }
             }
         }
+        .toy-button {
+            .toy-btn {
+                &::after {
+                    background-color: $color-secondary;
+                }
+            }
+        }
     }
-
     .shape-img-list {
         li {
             position: absolute;
@@ -260,6 +268,7 @@
             }
         }
     }
+
 }
 
 .rt-hero-layout-3 {

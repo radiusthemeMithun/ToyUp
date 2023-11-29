@@ -1,3 +1,7 @@
+.post-banner-wrap {
+    padding-bottom: 0;
+}
+
 .post-banner-box {
     background-color: #ffd631;
     padding: 50px 50px 60px 50px;
@@ -35,14 +39,23 @@
     .post-content {
         .toy-button {
             .toy-btn {
-                background-color: $color-black;
+                background-color: transparent;
+                &::before {
+                    background-color: $color-black;
+                }
                 color: $color-white;
+                &:hover {
+                    color: $color-white;
+                    .shape {
+                        color: $color-white;
+                    }
+                }
             }
         }
     }
     &.style-2 {
         background-image: none;
-        background-color: #F0344F;
+        background-color: #F0344F;  
         .post-content {
             .title {
                 color: $color-white;
@@ -52,8 +65,16 @@
             }
             .toy-button {
                 .toy-btn {
-                    background-color: $color-white;
+                    &::before {
+                       background-color: $color-white; 
+                    }
                     color: $color-black;
+                    &:hover {
+                        color: $color-white;
+                        .shape {
+                            color: $color-white;
+                        }
+                    }
                     .shape {
                         color: $color-black;
                     }
@@ -192,8 +213,9 @@
 .post-banner-wrap-2 {
     background-color: $color-primary;
     z-index: 1;
-    .rt-shape {
+    .rt-pt-shape {
         li {
+            position: absolute;
             &:nth-child(1) {
                 bottom: 0;
                 left: 0;
@@ -203,6 +225,18 @@
                 bottom: 0;
                 right: 0;
                 z-index: -1;
+            }
+        }
+    }
+    .text-box {
+        .toy-button {
+            .toy-btn {
+                &::after {
+                    background-color: $color-secondary;
+                }
+                &:hover {
+                    color: $color-white;
+                }
             }
         }
     }
@@ -237,7 +271,6 @@
         }
     }
 }
-
 
 .elements {
     display: none;

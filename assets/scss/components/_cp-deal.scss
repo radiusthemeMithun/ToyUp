@@ -31,10 +31,14 @@
             .toy-button {
                 .toy-btn {
                     background-color: transparent;
-                    border: 1px solid $color-gray-line;
+                    &::before {
+                        border: 1px solid $color-gray-line;
+                    }
+                    &::after {
+                        border-color: $color-primary;
+                    }
                     &:hover {
                         color: $color-white;
-                        background-color: $color-black;
                         .shape {
                             color: $color-white;
                         }
@@ -84,7 +88,7 @@
     border-radius: 12px;
     a {
         img {
-            transition: all .4s ease;
+            transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
         }
     }
 }
