@@ -30,12 +30,13 @@
             border: 0;
             background-color: $color-white;
             transform: translateY(0);
-            svg {
+            i {
                 color: $color-primary;
+                font-size: 15px;
             }
             &:hover {
                 background-color: $color-secondary;
-                svg {
+                i {
                     color: $color-white;
                 }
             }

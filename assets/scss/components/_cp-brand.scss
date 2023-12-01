@@ -8,8 +8,10 @@
         padding: 100px 0;
     }
     &.style-4 {
-        padding: 100px 0;
         background-color: $color-gray-9;
+        @include media-only ("lg", min) {
+            padding: 100px 0;
+        }
     }
 }
 
@@ -65,9 +67,12 @@
             border-radius: 40px;
             border: 0;
             background-color: $color-white;
+            i {
+                font-size: 15px;
+            }
             &:hover {
                 background-color: $color-secondary;
-                svg {
+                i {
                     color: $color-white;
                 }
             }

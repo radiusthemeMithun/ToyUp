@@ -10,13 +10,14 @@
     position: relative;
     z-index: 1;
     transition: all .4s ease-in-out;
-    svg {
+    i {
         color: $color-primary;
         transition: all .4s ease-in-out;
+        font-size: 24px;
     }
     &:hover {
         background-color: $color-primary;
-        svg {
+        i {
             color: $color-white;
         }
     }

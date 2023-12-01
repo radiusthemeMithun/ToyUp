@@ -4,7 +4,7 @@
     border-radius: 0 0 12px 12px;
     padding: 20px 30px;
 	@include media-only ("lg", min) {
-		transform: translateY(-40px);
+		transform: translateY(-32px);
 	}
 }
 
@@ -35,7 +35,7 @@
 				content: "";
 				height: 1px;
 				width: 0;
-				border-bottom: 1px solid $color-black;
+				border-bottom: 1px solid $color-primary;
 				position: absolute;
 				left: 100%;
 				bottom: -1px;
@@ -169,7 +169,7 @@
 			border: 0;
 			background-color: $color-secondary;
 			height: 36px;
-			width: 36;
+			width: 36px;
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
@@ -181,6 +181,7 @@
 			border-radius: 6px !important;
 			box-shadow: 4px 4px 8px 0px rgba(248, 142, 15, 0.24);
 			transition: all .4s ease;
+			padding: 0;
 			&:hover {
 				box-shadow: none;
 				svg {
@@ -189,7 +190,6 @@
 			}
 			svg {
                 color: $color-white;
-				font-size: 15px;
 				transition: all .4s ease;
             }
 			&:focus {
@@ -375,9 +375,18 @@
 			.toy-btn {
 				color: #0259E9;
 				&:hover {
+					color: $color-white;
+					.shape {
+						color: $color-white;
+					}
+				}
+				&::before {
 					background-color: $color-white;
 				}
-				svg {
+				&::after {
+					background-color: $color-primary;
+				}
+				.shape {
 					color: #0259E9;
 				}
 			}

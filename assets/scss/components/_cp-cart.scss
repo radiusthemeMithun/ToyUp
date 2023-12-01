@@ -49,12 +49,14 @@
         border-radius: 50px;
         overflow: hidden;
         &:hover {
-            .shape {
-                animation: toBottomFromTop 0.7s forwards;
+            i {
+                &::before {
+                    animation: toBottomFromTop 0.7s forwards;
+                }
                 color: $color-primary;
             }
         }
-        .shape {
+        i {
             color: $color-body;
             transition: all .4s ease-in-out;
         }

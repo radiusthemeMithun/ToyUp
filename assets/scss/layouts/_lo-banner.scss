@@ -557,12 +557,13 @@
         border: 2px solid $color-white;
         background-color: #FFF7ED;
         box-shadow: 8px 8px 32px 0px rgba(169, 92, 0, 0.20);
-        svg {
+        i {
             color: $color-body;
             transition: all .4s ease-out;
+            font-size: 20px;
         }
         &:hover {
-            svg {
+            i {
                 color: $color-secondary;
                 animation: headShake 1.5s;
             }

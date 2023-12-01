@@ -9,7 +9,7 @@
     }
     &.style-2 {
         height: auto;
-        padding: 110px 0 ;
+        padding: 110px 0 40px 0;
         margin-bottom: 0;
     }
 }
@@ -163,15 +163,19 @@
             &:hover {
                 background-color: $color-primary;
                 border-color: $color-primary;
-                .shape {
+                i {
                     color: $color-white;
                     animation: toBottomFromTop .7s forwards;
                 }
             }
-            .shape {
+            i {
                 color: $color-body;
                 transition: all .31s ease-in-out;
             }
+        }
+
+        .icon-view {
+            font-size: 14px;
         }
 
         .action-item-dropdown {
@@ -227,11 +231,11 @@
                 &:hover {
                     background-color: $color-primary;
                     border-color: $color-primary;
-                    .shape {
+                    i {
                         color: $color-white;
                     }
                 }
-                .shape {
+                i {
                     color: $color-black;
                 }
             }

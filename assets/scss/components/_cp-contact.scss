@@ -23,11 +23,12 @@
         }
         .icon-shape {
             position: absolute;
-            top: 18px;
+            top: 14px;
             left: 32px;
             z-index: 5;
-            svg {
+            i {
                 color: $color-primary;
+                font-size: 20px;
             }
         }
         .rt-textarea {
@@ -320,7 +321,7 @@
         border-color: $color-white;
         .icon {
             background-color: $color-secondary;
-            svg {
+            i {
                 color: $color-white;
                 animation: toBottomFromTop .7s forwards;
             }
@@ -341,12 +342,14 @@
             width: 72px;
             border-radius: 72px;
         }
-        svg {
+        i {
             color: $color-secondary;
             transition: all .3s ease-in-out;
-            height: 22px;
+            // height: 22px;
+            font-size: 22px;
             @include media-only (321px, min) {
-                height: 32px;
+                // height: 32px;
+                font-size: 32px;
             }
         }
     }

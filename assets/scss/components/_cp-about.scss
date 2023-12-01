@@ -45,7 +45,6 @@
         }
     }
 }
-
 .about-img-wrap {
     img {
         border-radius: 642px;
@@ -83,7 +82,6 @@
         }
     }
 }
-
 .about-video-wrap {
     background-image: url(../../media/about/about-1.jpg);
     background-repeat: no-repeat;
@@ -107,7 +105,6 @@
         z-index: -1;
     }
 }
-
 .about-feature-layout {
     flex-wrap: wrap;
     @include media-only ("sm", min) {

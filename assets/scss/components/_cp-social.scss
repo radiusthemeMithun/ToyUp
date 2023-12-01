@@ -15,14 +15,14 @@
                 justify-content: center;
                 transition: all .4s ease-in-out;
                 overflow: hidden;
-                svg {
+                i {
                     color: $color-body;
                     transition: all .4s ease-in-out;
                 }
                 &:hover {
                     background-color: $color-primary;
                     border-color: $color-primary;
-                    svg {
+                    i {
                         color: $color-white;
                         animation: toBottomFromTop .7s forwards;
                     }

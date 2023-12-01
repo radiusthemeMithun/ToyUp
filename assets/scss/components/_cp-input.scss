@@ -2,7 +2,7 @@
  * Components: Input.
  */
 
- .input-group {
+.input-group {
     width: 100%;
     position: relative;
     display: block;
@@ -55,14 +55,14 @@
             right: 6px;
             margin-top: 0;
         }
-        svg {
+        i {
             color: $color-white;
             transition: all .4s ease-in-out;
         }
         &:hover {
             background-color: $color-primary;
             color: $color-black;
-            svg {
+            i {
                 animation: headShake 1.5s;
                 color: $color-white;
             }

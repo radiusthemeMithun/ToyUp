@@ -6,6 +6,7 @@
 
 .Rt-inner-page {
     background-color: $color-gray-9;
+    padding-top: 60px;
 }
 
 
@@ -86,11 +87,16 @@
                         margin-top: 15px;
                     }
                     .toy-btn {
-                        background-color: $color-primary;
                         color: $color-white;
                         padding: 8px 15px;
                         @include media-only ("md", min) {
                             padding: 13px 30px 12px;
+                        }
+                        &::before {
+                            background-color: $color-primary;
+                        }
+                        &::after {
+                            background-color: $color-secondary;
                         }
                         .shape {
                             color: $color-white;
@@ -215,9 +221,10 @@
         padding: 10px 14px 8px;
         line-height: 1;
         transition: all .4s ease-in-out;
-        &:hover {
-            background-color: $color-yellow-39;
-            border-color: $color-yellow-39;
+        img {
+            margin-right: 3px;
+            position: relative;
+            top: -2px;
         }
     }
 }
@@ -457,6 +464,18 @@
             }
         }
     }
+    .item-social {
+        ul {
+            li {
+                a {
+                    border: 1px solid $color-gray-line;
+                    &:hover {
+                        border-color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .single-author-wrap {
@@ -493,13 +512,26 @@
         }
         .toy-button {
             .toy-btn {
-                background-color: $color-blue-200;
                 color: $color-primary;
                 padding: 10px 24px 9px;
                 border-radius: 50px;
+                &::before {
+                    background-color: $color-blue-200;
+                }
                 &:hover {
-                    background-color: $color-primary;
                     color: $color-white;
+                }
+            }
+        }
+        .item-social {
+            ul {
+                li {
+                    a {
+                        border: 1px solid $color-gray-line;
+                        &:hover {
+                            border-color: $color-primary;
+                        }
+                    }
                 }
             }
         }

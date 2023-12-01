@@ -24,10 +24,18 @@
             color: $color-white;
             font-weight: $font-medium;
             font-size: 16px;
-            svg {
-                position: relative;
-                top: -2px;
+            transition: all .4s ease-in-out;
+            &:hover {
+                background-color: $color-secondary;
+                i {
+                    &::before {
+                        animation: headShake 1.5s;
+                    }
+                }
+            }
+            i {
                 margin-left: 5px;
+                transition: all .4s ease-in-out;
             }
         }
     }
@@ -56,10 +64,19 @@
         }
         .toy-button {
             .toy-btn {
-                background-color: $color-primary;
                 color: $color-white;
-                .shape {
+                &:hover {
                     color: $color-white;
+                }
+                &::before {
+                    background-color: $color-primary;
+                }
+                &::after {
+                    background-color: $color-secondary;
+                }
+                i {
+                    color: $color-white;
+                    margin-left: 10px;
                 }
             }
         }

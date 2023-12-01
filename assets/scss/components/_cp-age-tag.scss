@@ -13,7 +13,6 @@
         padding-top: 100px;
     }
 }
-
 .age-card-tag {
     position: relative;
     &:hover {
@@ -43,7 +42,6 @@
         }
     }
 }
-
 .categoery-tag-content {
     position: absolute;
     top: 50%;
@@ -71,10 +69,10 @@
         }
     }
 }
-
 .age-card-tag-2 {
     &:hover {
         .item-shape {
+            transform: scale(1.03);
             .border-shape {
                 path {
                     animation: dash-animation 5s linear infinite;
@@ -85,6 +83,8 @@
     .item-shape {  
         z-index: 1;
         overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
         .shape {
             color: $color-primary;
             &.style-2 {

@@ -1,6 +1,9 @@
 
 .testimonial-wrap {
-    padding-top: 100px;
+    // padding: 110px 0 120px;
+    @include media-only ("lg", min) {
+        padding: 110px 0 120px;
+    }
     .section-heading {
         @include media-only ("lg", min) {
             width: 570px;
@@ -18,7 +21,7 @@
     &:hover {
         .item-img {
             .shape-icon {
-                svg {
+                i {
                     transform: rotateY(360deg);
                 }
             }
@@ -48,9 +51,10 @@
             right: 0;
             border: 2px solid $color-white;
             box-shadow: 4px 4px 16px rgba(1, 104, 111, .1);
-            svg {
+            i {
                 color: $color-white;
                 transition: all 1s ease;
+                font-size: 12px;
             }
         }
     }
